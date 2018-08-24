@@ -7,7 +7,8 @@ This sample application uses Spring Boot to build a generic set of services to r
   - filter by continent
   - filter by country
   - test the search function for various inputs
-  - enable audit trail for data changes 
+  - enable audit trail for data changes
+  - enable metrics for services 
 
 # Governing Principles
 
@@ -65,8 +66,11 @@ URL to access H2 on localhost
 ```sh
 http://localhost:8080/h2-console/
 ```
-JDBC URL - jdbc:h2:mem:testdb
-User Name - sa
-Password - (empty)
+- JDBC URL - jdbc:h2:mem:testdb
+- User Name - sa
+- Password - (empty)
   
-
+# Metrics using Actuator
+```sh
+http://localhost:8080/actuator/
+```
