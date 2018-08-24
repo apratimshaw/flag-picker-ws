@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "c0a35ca5-bb6e-43be-8659-9e1151341d32",
+		"name": "FlagPicker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Countries All",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/v1/countries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Countries By Name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/v1/countries?countryName=India",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "countryName",
+							"value": "India"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Countries By Continent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/v1/countries?continentName=Asia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "continentName",
+							"value": "Asia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Countries By Name And Continent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/v1/countries?countryName=India&continentName=Asia",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "countryName",
+							"value": "India"
+						},
+						{
+							"key": "continentName",
+							"value": "Asia"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Flag",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/v1/countries/flag?countryName=India&continentName=\"Asia\"",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"countries",
+						"flag"
+					],
+					"query": [
+						{
+							"key": "countryName",
+							"value": "India"
+						},
+						{
+							"key": "continentName",
+							"value": "\"Asia\""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Countries Invalid Name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/v1/countries?countryName=Indiaaaa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "countryName",
+							"value": "Indiaaaa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Countries Invalid Continent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/v1/countries?continentName=Indiaaaa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "continentName",
+							"value": "Indiaaaa"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Countries Invalid Combination",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/v1/countries?continentName=Asia&countryName=Nigeria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"countries"
+					],
+					"query": [
+						{
+							"key": "continentName",
+							"value": "Asia"
+						},
+						{
+							"key": "countryName",
+							"value": "Nigeria"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
