@@ -6,6 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import org.hibernate.envers.Audited;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
 
 /**
@@ -15,6 +17,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
  *
  */
 @Entity
+@Audited
 public class Country {
 	
 	@Id

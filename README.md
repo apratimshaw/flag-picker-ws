@@ -7,6 +7,7 @@ This sample application uses Spring Boot to build a generic set of services to r
   - filter by continent
   - filter by country
   - test the search function for various inputs
+  - enable audit trail for data changes 
 
 # Governing Principles
 
@@ -42,6 +43,30 @@ Use Postman to test the application
   - Import it on Postman
   - Execute
   
-  
+# URLs for locally running application
+CURL Example - Get flag for country
+ ```sh
+curl -i  -H "Content-Type: application/json" -X GET http://localhost:8080/v1/countries?countryName=India
+``` 
+Get Countries By Name
+```sh
+http://localhost:8080/v1/countries?countryName=India
+```
+Get Countries By Continent
+```sh
+http://localhost:8080/v1/countries?continentName=Asia
+```
+Get Flag for Country
+```sh
+http://localhost:8080/v1/countries/flag?countryName=India
+```
+# H2 DB (used for portability of the project only)
+URL to access H2 on localhost
+```sh
+http://localhost:8080/h2-console/
+```
+JDBC URL - jdbc:h2:mem:testdb
+User Name - sa
+Password - (empty)
   
 
