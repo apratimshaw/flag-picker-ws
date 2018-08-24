@@ -9,6 +9,7 @@ This sample application uses Spring Boot to build a generic set of services to r
   - test the search function for various inputs
   - enable audit trail for data changes
   - enable metrics for services 
+  - DDL for Tables
 
 # Governing Principles
 
@@ -74,3 +75,6 @@ http://localhost:8080/h2-console/
 ```sh
 http://localhost:8080/actuator/
 ```
+
+#Database Schema DDL File
+- The database schema file (h2) is located at /flag-picker-ws/DB_SCHEMA_DDL.sql
